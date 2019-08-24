@@ -12,8 +12,8 @@ export function signIn({email, password}) {
         payload: {
             user: {
                 _id: 0,
-                name: 'Max Nelson',
-                address: '1234 I live here',
+                name: 'Roy McNoy',
+                address: '123 fake street',
                 cartProducts: []
             }
         }
@@ -24,6 +24,39 @@ export function setPurchaseDetail(_id) {
     return ({
         type: SET_PURCHASE_DETAIL,
         payload: _id
+    })
+}
+
+export function fetchShopProducts() {
+    type: SET_CART_PRODUCTS;
+    return ({
+        type: SET_SHOP_PRODUCTS,
+        payload: [
+            {
+                id: 0,
+                product: {
+                    _id: 0,
+                    title: 'JavaScript in the Browser',
+                    description: 'The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. ... The running speed starts slowly, but gets faster each minute after you hear this signal.',
+                    price: 1.99,
+                    belongsTo: [0, 1],
+                    imageUrl: 'http://via.placeholder.com/80x80'
+                },
+                quantity: 2
+            },
+            {
+                id: 1,
+                product: {
+                    _id: 1,
+                    title: 'Graph Database',
+                    description: 'The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. ... The running speed starts slowly, but gets faster each minute after you hear this signal.',
+                    price: 1.99,
+                    belongsTo: [0, 6],
+                    imageUrl: 'http://via.placeholder.com/80x80'
+                },
+                quantity: 1
+            },
+        ]
     })
 }
 
@@ -77,8 +110,8 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Jordan Hudgens',
-                    shippingAddress: '1234 West State Street'
+                    name: 'Bingo Bongo',
+                    shippingAddress: '123 Fake Street'
                 }
             },
             {
@@ -88,8 +121,8 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Maxwell Nelson',
-                    shippingAddress: '1337 West State Street'
+                    name: 'Snoop Dogg',
+                    shippingAddress: '420 Sunrise Blvd'
                 }
             },
             {
@@ -99,8 +132,8 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Jordan Hudgens',
-                    shippingAddress: '1234 West State Street'
+                    name: 'Rick LaFleur',
+                    shippingAddress: '1 Bonneview Ln'
                 }
             },
             {
@@ -110,8 +143,8 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Max Asher Nelson',
-                    shippingAddress: '1234 West State Street'
+                    name: 'Julian',
+                    shippingAddress: '2 Bonneview Ln'
                 }
             },
             {
@@ -121,8 +154,8 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Jordan Hudgens',
-                    shippingAddress: '1234 West State Street'
+                    name: 'Bubbles',
+                    shippingAddress: '2 Bonneview Ln'
                 }
             },
             {
@@ -132,7 +165,7 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Jordan Hudgens',
+                    name: 'Blah Blah',
                     shippingAddress: '1234 West State Street'
                 }
             },
@@ -143,7 +176,7 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Jordan Hudgens',
+                    name: 'This Guy',
                     shippingAddress: '1234 West State Street'
                 }
             },
@@ -154,7 +187,7 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Andrew Wold',
+                    name: 'Dis Guy',
                     shippingAddress: '348 Yo State Street'
                 }
             },
